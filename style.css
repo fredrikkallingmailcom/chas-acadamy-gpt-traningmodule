@@ -17,6 +17,7 @@ main {
     padding: 2rem;
     border: 3px solid #0f0f0f;
     border-radius: 2rem;
+    margin: 2rem;
 }
 
 .cardOne, 
