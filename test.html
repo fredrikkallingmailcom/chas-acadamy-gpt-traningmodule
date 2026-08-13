@@ -3,30 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
 
-    <title>DOM-övning</title>
-
-    <link ref="stylesheet" href="style.css">
+    <title>DOM</title>
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1 id="heading">Min sida</h1>
+        <nav aria-label="Huvudnavigation">
+            <a href="">Hem</a>
+        </nav>
     </header>
-
     <main>
-        <section>
-            <h2>Knapper</h2>
-            <button class="btn" type="button">Klicka</button>
-            <button class="btn" type="button">Klicka igen</button>
+        <section class="cardOne">
+            <h1>Card One</h1>
+            <p id="message">Klicka på knapp för att ändra utseende</p>
+            <button class="themeButton" type="button">Ändra tema</button>
+        </section>
+        <section class="cardTwo">
+            <h1>Card Two</h1>
+            <p id="message">Klicka på knapp för att ändra utseende</p>
+            <button class="themeButton" type="button">Ändra tema</button>
         </section>
     </main>
-
-    <footer>
-        <p>2026 min sida</p>
-    </footer>
 </body>
 
 </html>
