@@ -18,24 +18,41 @@
     </header>
     <main>
         <section class="card cardOne">
-            <img
-            id="cardImage"
-            src="images/cardImg.pgn"
-            alt="Card Two"
-            >
+            <a target="_blank" id="imgLink" href="https://fallback.aftonbladet.se/">
+                <img id="cardImage" src="image.png" alt="Card Two">
+            </a>
             <h1>Card One</h1>
             <p id="message">Klicka på knapp för att ändra utseende</p>
             <button class="themeButton" type="button">Ändra tema</button>
         </section>
         <section class="card cardTwo">
-            <img
-            id="cardImage"
-            src="images/cardImg.pgn"
-            alt="Card One"
-            >
+            <img id="cardImage" src="image.png" alt="Card One">
             <h1>Card Two</h1>
             <p id="message">Klicka på knapp för att ändra utseende</p>
             <button class="themeButton" type="button">Ändra tema</button>
+        </section>
+        <section>
+            <h1>Registrering</h1>
+
+            <form id="registerform">
+                <div>
+                    <label for="username"></label>
+                    <input id="" name="username" type="text" required>
+                </div>
+                <div>
+                    <label for="username">Name:</label>
+                    <input id="username" name="username" type="text" required>
+                </div>
+                <div>
+                    <label for="email">E-post</label>
+                    <input id="email" name="email" type="email" requried>
+                </div>
+                <button type="submit">
+                    Registera
+                </button>
+            </form>
+
+            <p id="output"></p>
         </section>
     </main>
 </body>

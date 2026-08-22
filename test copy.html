@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DOM - Dynamisk sida</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script_v2.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Huvudnavigation">
+            <a href="#">Home</a>
+        </nav>
+    </header>
+
+    <main class="grid-container">
+
+        <section class="card cardOne" id="userCard">
+
+            <h1>Användare</h1>
+
+            <div class="userInfo">
+                <p id="name">Fredrik</p>
+                <p id="age">25</p>
+                <p id="city">Borås</p>
+                <p id="mail">fredrik.kallin@mail.com</p>
+            </div>
+
+            <div id="loader">
+                <ul id="tasklistLi" aria-live="polite"></ul>
+            </div>
+
+            <button id="highlightButton" type="button">
+                Välj nästa
+            </button>
+        </section>
+
+        <section class="card cardTwo">
+
+            <h1>Att göra</h1>
+
+            <div class="todo-controls">
+
+                <label for="taskInput">
+                    Ny uppgift
+                </label>
+
+                <input id="taskInput" name="task" type="text" autocomplete="off">
+
+                <button id="add" type="button">
+                    Lägg till
+                </button>
+
+            </div>
+
+            <ul id="tasklist" aria-live="polite"></ul>
+
+        </section>
+        <section class="card cardOne">
+            <h1>Timer</h1>
+
+            <p id="message">
+                Väntar...
+            </p>
+            <button id="startButton">
+                Starta timer
+            </button>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
