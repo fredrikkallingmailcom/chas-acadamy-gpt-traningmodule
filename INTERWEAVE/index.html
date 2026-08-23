@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title></title>
+    <link ref="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <a class="logo" href="#">Interweave</a>
+        <nav class="main-nav" aria-label="Huvudnavigation">
+            <a href="#">Projects</a>
+            <button id="settingButton" type="button">settingButton</button>
+        </nav>
+    </header>
+    <main class="body">
+        <!-- Left: Workflow-browser-->
+         <aside class="panel workflow-browser">
+            <header class="panel-header">
+                <h2>Workflow</h2>
+                <button id="newProjectButton" type="button">
+                    *
+                </button>
+            </header>
+            <p id="workflowStatus">
+                0 tasks remaining
+            </p>
+            <ol id="workFlowList">
+
+            </ol>
+         </aside>
+         <section class="panel timer-panel">
+            <header class="panel-header">
+                <h2>
+                    Timer
+                </h2>
+            </header>
+            <div id="timerDisplay">25:00</div>
+            <div class="timer-settings">
+                <label for="timerMinutes">
+                    Minuter
+                </label>
+                <input
+                id="timerMinutes"
+                type="number"
+                min="1"
+                value="25"
+                >
+            </div>
+            <div class="timer-action">
+                <button id="startTimerButton" type="button">
+                    Start
+                </button>
+                <button id="pauseTimeButton" type="button">
+                    Pause
+                </button>
+            </div>
+         </section>
+         <section class="panel focus-panel">
+            <header class="focus-header">
+                <div>
+                    <p class="eyebrow">
+                        Current task
+                    </p>
+                    <h1 id="focusTitle">
+                        Inga aktiva uppgifter
+                    </h1>
+                </div>
+                <button id="completeButton" type="button">
+                    Klar
+                </button>
+            </header>
+            <p id="focusProject"></p>
+            <div class="focus-content">
+                <h2>Instruktioner</h2>
+                <p id="focusInstruction">Skapa ett projekt och ett arbetsflöde för att börja</p>
+            </div>
+         </section>
+    </main>
+</body>
+
+</html>
