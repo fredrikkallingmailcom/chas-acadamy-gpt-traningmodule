@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title></title>
-    <link ref="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
@@ -19,21 +19,52 @@
     </header>
     <main class="body">
         <!-- Left: Workflow-browser-->
-         <aside class="panel workflow-browser">
+        <aside class="panel left-workflow-browser">
             <header class="panel-header">
                 <h2>Workflow</h2>
                 <button id="newProjectButton" type="button">
-                    *
+                    New project
                 </button>
             </header>
-            <p id="workflowStatus">
-                0 tasks remaining
-            </p>
-            <ol id="workFlowList">
-
-            </ol>
-         </aside>
-         <section class="panel timer-panel">
+            <main class="panel-body">
+                <div id="workflowStatus">
+                    <h2>Tasks</h2>
+                    <button id="newTaskButton" type="button">
+                        Add task
+                    </button>
+                    <p>0 tasks remaining</p>
+                </div>
+                <div id="workFlowList">
+                    <section class="workflow-project">
+                        <h3>Write a novel</h3>
+                        <ol>
+                            <li class="current-task">
+                                Write the prelude.
+                                <button type="button">Klar</button>
+                            </li>
+                            <li>
+                                Write the first chapter.
+                                <button type="button">Klar</button>
+                            </li>
+                        </ol>
+                    </section>
+                    <section class="workflow-project">
+                            <h3>Housecleaning</h3>
+                            <ol>
+                                <li>
+                                    The kitchen.
+                                    <button type="button">Klar</button>
+                                </li>
+                                <li>
+                                    The bedroom.
+                                    <button type="button">Klar</button>
+                                </li>                                
+                            </ol>
+                    </section>
+                </div>
+            </main>
+        </aside>
+        <section class="panel left-timer-panel">
             <header class="panel-header">
                 <h2>
                     Timer
@@ -44,12 +75,7 @@
                 <label for="timerMinutes">
                     Minuter
                 </label>
-                <input
-                id="timerMinutes"
-                type="number"
-                min="1"
-                value="25"
-                >
+                <input id="timerMinutes" type="number" min="1" value="25">
             </div>
             <div class="timer-action">
                 <button id="startTimerButton" type="button">
@@ -59,8 +85,8 @@
                     Pause
                 </button>
             </div>
-         </section>
-         <section class="panel focus-panel">
+        </section>
+        <section class="panel center-focus-panel">
             <header class="focus-header">
                 <div>
                     <p class="eyebrow">
@@ -79,7 +105,14 @@
                 <h2>Instruktioner</h2>
                 <p id="focusInstruction">Skapa ett projekt och ett arbetsflöde för att börja</p>
             </div>
-         </section>
+        </section>
+        <aside class="panel right-menu">
+            <header class="">
+                <div>
+
+                </div>
+            </header>
+        </aside>
     </main>
 </body>
 

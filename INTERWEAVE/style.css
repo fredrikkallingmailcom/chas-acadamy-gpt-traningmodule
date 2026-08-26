@@ -39,3 +39,156 @@ body {
     gap: 1rem;
 }
 
+/* -------- MAIN -------- */
+
+.body {
+    display: grid;
+
+    grid-template-columns:
+        minmax(170px, 200px) minmax(0, 1fr) minmax(200px, 250px);
+
+    gap: 1rem;
+
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* --------- PANEL --------- */
+
+.panel {
+    min-width: 0;
+
+    background-color: white;
+
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.panel-body {
+    padding: 1rem;
+
+    border-bottom: 1px solid #ddd;
+}
+
+/* ---------- LEFT WORKFLOW BROWSER ----------- */
+
+.left-workflow-browser {
+    grid-column: 1;
+    grid-row: 1;
+
+    overflow: hidden;
+}
+
+#workflowStatus {
+    padding: 0 1rem;
+
+    color: #666;
+    font-size: 0.8rem;
+}
+
+#workFlowList {
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+}
+
+.workflow-project {
+    border-bottom: 1px solid black;
+}
+
+.workflow-project h3 {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+}
+
+.workflow-project ol {
+    margin: 0;
+    padding: 0;
+
+   list-style-position: inside;
+}
+
+.workflow-project li {
+    display: flex;
+    justify-content: space-between;
+    align-item:center;
+    border-top: 1px solid #eee;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+}
+
+.current-task {
+    background-color: #ddd;
+}
+
+
+/* ---------- TIMER ----------- */
+
+.left-timer-panel {
+    grid-column: 1;
+    grid-row: 2;
+
+    padding: 1rem;
+}
+
+#timerDisplay {
+    margin: 1rem 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* ---------- CENTER ----------- */
+
+.center-focus-panel {
+    grid-column: 2;
+
+    grid-row: 1 / span 2;
+
+    padding: 2rem;
+}
+
+.focus-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+
+    gap: 2rem;
+
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.eyebrow {
+    margin: 0;
+
+    color: #666;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.focus-header h1 {
+    margin-top: 0.3rem;
+}
+
+.focus-content {
+    margin-top: 2rem;
+}
+
+.right-menu {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    padding: 2rem;
+}
