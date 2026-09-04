@@ -104,8 +104,6 @@ function showAllParts(projectsArray) {
     for (let i = 0; i < projectsArray.length; i++) {
         for (let j = 0; j < projectsArray[i].tasks.length; j++) {
             for (let a = 0; a < projectsArray[i].tasks[j].parts.length; a++) {
-                //mixedArray.push(projectsArray[i].tasks[j].parts[a]);
-
                 mixedArray.push({
                     projectId: projectsArray[i].id,
                     projectTitle: projectsArray[i].title,
