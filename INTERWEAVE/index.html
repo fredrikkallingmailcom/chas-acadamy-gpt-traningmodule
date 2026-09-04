@@ -26,7 +26,7 @@
                     New project
                 </button>
             </header>
-            <main class="panel-body">
+            <div class="panel-body">
                 <div id="workflowStatus">
                     <h2>Tasks</h2>
                     <button id="newTaskButton" type="button">
@@ -37,18 +37,11 @@
                 <div id="workFlowList">
                     <section class="workflow-project">
                         <h3>Write a novel</h3>
-                        <ol>
-                            <li class="current-task">
-                                Write the prelude.
-                                <button type="button">Klar</button>
-                            </li>
-                            <li>
-                                Write the first chapter.
-                                <button type="button">Klar</button>
-                            </li>
+                        <ol id="workflowTasks">
+                            <!-- Javascript skapar li-element här -->
                         </ol>
                     </section>
-                    <section class="workflow-project">
+<!--                    <section class="workflow-project">
                             <h3>Housecleaning</h3>
                             <ol>
                                 <li>
@@ -60,9 +53,9 @@
                                     <button type="button">Klar</button>
                                 </li>                                
                             </ol>
-                    </section>
+                    </section>-->
                 </div>
-            </main>
+            </div>
         </aside>
         <section class="panel left-timer-panel">
             <header class="panel-header">

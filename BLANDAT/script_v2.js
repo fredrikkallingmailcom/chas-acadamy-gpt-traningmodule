@@ -4,6 +4,8 @@ const loader = document.getElementById("loader");
 const taskList = document.getElementById("tasklistLi");
 
 const userInfo = document.querySelector(".userInfo");
+
+userInfo.textContent 
 const paragraphs = userInfo.querySelectorAll("p");
 
 let currentParagraph = paragraphs[0];
@@ -54,6 +56,12 @@ highlightButton.addEventListener("click", () => {
 
 const taskInput = document.getElementById("taskInput");
 const addButton = document.getElementById("add");
+const highlightButton = document.getElementById("highlightButton");
+
+highlightButton.addEventListener("click", () => {
+
+});
+
 const taskListToDo = document.getElementById("tasklist");
 
 let counter = 0;

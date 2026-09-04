@@ -12,18 +12,18 @@ const projects = [
                     {
                         id: 1,
                         instruction: "Write headline",
-                    dependsOn: 0,
+                        dependsOn: 0,
                         done: false
                     },
                     {
                         id: 2,
-                        instruction: "Write opening sentence.",
+                        instruction: "Write opening.",
                         dependsOn: 1,
                         done: false
                     },
                     {
                         id: 3,
-                        instruction: "Write opening sentence.",
+                        instruction: "Write ending.",
                         dependsOn: 2,
                         done: false
                     }
@@ -113,6 +113,7 @@ function showAllParts(projectsArray) {
 
                     partId: projectsArray[i].tasks[j].parts[a].id,
                     instruction: projectsArray[i].tasks[j].parts[a].instruction,
+                    dependsOn: projectsArray[i].tasks[j].parts[a].dependsOn,
                     done: projectsArray[i].tasks[j].parts[a].done
                 });
             }
@@ -121,8 +122,6 @@ function showAllParts(projectsArray) {
 
     return mixedArray;
 }
-
-const mixedArray = shuffleArray(showAllParts(projects));
 
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -134,3 +133,39 @@ function shuffleArray(array) {
 
     return array;
 }
+
+const mixedArray = shuffleArray(showAllParts(projects));
+
+const workflowTasks = document.getElementById("workflowTasks");
+
+function renderWorkFlow(array) {
+    workflowTasks.textContent = "";
+
+    for (let i = 0; i < array.length; i++) {
+        const li = document.createElement("li");
+        const text = document.createElement("span");
+        const button = document.createElement("button");
+
+
+        text.textContent = array[i].projectId + ". " +
+            array[i].instruction.slice(0, 15);
+
+        button.textContent = "Klar";
+        button.type = "button";
+        button.addEventListener("click", () => {
+            array.splice(i, 1);
+            renderWorkFlow(array);
+        });
+
+        if(i === 0){
+            li.classList.add("current-task");
+        }
+
+        li.appendChild(text);
+        li.appendChild(button);
+
+        workflowTasks.appendChild(li);
+    }
+}
+
+renderWorkFlow(mixedArray);
