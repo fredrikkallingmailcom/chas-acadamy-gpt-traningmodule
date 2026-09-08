@@ -1,0 +1,10 @@
+body {
+    background: #111;
+    color: #ddd;
+    font-family: monospace;
+}
+
+#game {
+    width: 600px;
+    margin: 40px auto;
+}
