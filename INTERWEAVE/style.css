@@ -43,10 +43,8 @@ body {
 
 .body {
     display: grid;
-
     grid-template-columns:
         minmax(170px, 200px) minmax(0, 1fr) minmax(200px, 250px);
-
     gap: 1rem;
 
     max-width: 1500px;
